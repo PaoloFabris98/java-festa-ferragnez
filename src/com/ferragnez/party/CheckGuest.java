@@ -21,7 +21,7 @@ public class CheckGuest {
         System.out.println("\nDimmi il tuo nome per sapere se sei invitato alla festa.");
         String guestName = input.nextLine();
 
-        index = 0;
+        int index = 0;
         boolean found = false;
         while (index < guestObjects.size()) {
             guestsClass currentGuest = guestObjects.get(index);
