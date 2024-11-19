@@ -22,23 +22,19 @@ public class CheckGuest {
         String guestName = input.nextLine();
 
         int index = 0;
-        boolean found = false;
+        boolean founded = false;
         while (index < guestObjects.size()) {
             guestsClass currentGuest = guestObjects.get(index);
             if (currentGuest.name.equalsIgnoreCase(guestName)) {
-                if (currentGuest.invitation) {
-                    System.out.println("Sei invitato alla festa!");
-                } else {
-                    System.out.println("Non sei invitato alla festa.");
-                }
-                found = true;
+                founded = true;
                 break;
             }
             index++;
         }
-
-        if (!found) {
-            System.out.println("Non sei sulla lista degli ospiti.");
+        if (founded == true) {
+            System.out.println("Sei invitato alla festa!");
+        } else {
+            System.out.println("Non sei invitato alla festa.");
         }
 
         input.close();
